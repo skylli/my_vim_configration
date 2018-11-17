@@ -61,21 +61,17 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
-au BufNewFile,BufRead *.py
-\ set tabstop=4
-\ set softtabstop=4
-\ set shiftwidth=4
-\ set textwidth=79
-\ set expandtab
-\ set autoindent
+au BufNewFile,BufRead *.py 
+\ set tabstop=4 |
+\ set softtabstop=4 |
+\ set shiftwidth=4 |
+\ set textwidth=79 |
+\ set autoindent |
 \ set fileformat=unix
 
-au BufNewFile,BufRead *.js, *.html, *.css
-\ set tabstop=2
-\ set softtabstop=2
-\ set shiftwidth=2
-
-au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+"Flagging Unnecessary Whitespace
+highlight BadWhitespace ctermbg=red guibg=darkred
+au BufRead, BufNewFile *.py, *.pyw, *.c, *.h match BadWhitespace /\s\+$/
 set encoding=utf-8
 
 let g:ycm_autoclose_preview_window_after_completion=1
